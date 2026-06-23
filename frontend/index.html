@@ -3,97 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>flipkart clone</title>
+    <title>ShopKart</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="navbar">
-    <h2>Flipkart</h2>
 
-    <input type="text" placeholder="Search Products">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">FlipKart</div>
 
-    <button>Login</button>
+        <div class="search-box">
+            <input type="text" placeholder="Search for products, brands and more">
+            <button id="search-btn">Search</button>
+        </div>
 
-    <button id="cart-btn" > Cart (0)</button>
-    </header>
+        <div class="nav-right">
+            <button class="login-btn">Login</button>
+            <button id="cart-btn">Cart (0)</button>
+            <button>Become a Seller</button>
+            <button id="theme-btn">🌙</button>
+        </div>
+    </nav>
+
+    <!-- Categories -->
     <section class="categories">
+        <div class="categories">Grocery</div>
+        <div class="categories">Mobiles</div>
+        <div class="categories">Fashion</div>
+        <div class="categories">Electronics</div>
+        <div class="categories">Home</div>
+        <div class="categories">Appliances</div>
+        <div class="categories">Travel</div>
+        <div class="categories">Beauty</div>
+    </section>
 
-    <div class="category">Mobiles</div>
-    <div class="category">Laptops</div>
-    <div class="category">Fashion</div>
-    <div class="category">Electronics</div>
-    <div class="category">Grocery</div>
+    <!-- Hero Banner -->
+    <section class="hero">
+        <h1>Big Shopping Festival</h1>
+        <p>Up to 80% Off on Top Brands</p>
+        <button id="shop-now">Shop Now</button>
+    </section>
 
-</section>
-<section class="banner">
-    <h1>Big Billion Days Sale</h1>
-    <p>Up to 70% OFF</p>
-</section>
-<section class="products">
+    <!-- Products -->
+    <h2 class="heading">Best Deals For You</h2>
 
-    <div class="card">
-        <img src="https://rukminim2.flixcart.com/image/1536/1536/xif0q/mobile/a/c/k/-original-imagtc5fuzkvczr7.jpeg?q=90">
-        <h3>iPhone 15</h3>
-        <p>⭐⭐⭐⭐⭐</p>
-        <p>₹79,999</p>
-         <p class="discount">20% OFF</p>
-        <button class="cart-btn">Add to Cart</button>
-    </div>
+    <section class="products">
 
-    <div class="card">
-        <img src="https://ehpworld.com/wp-content/uploads/2021/10/HP14s-Dq2535Tu-left-rearview.jpg">
-        <h3>HP Laptop</h3>
-         <p>⭐⭐⭐⭐⭐</p>
+        <div class="card">
+            <img src="https://via.placeholder.com/180" alt="Phone">
+            <h3>iPhone 15</h3>
+            <p class="price">₹79,999</p>
+            <p class="rating">★★★★★</p>
+            <button class="cart-btn">Add To Cart</button>
+        </div>
 
-        <p>₹55,000</p>
-        <p class="discount">20% OFF</p>
-        <button class="cart-btn">Add to Cart</button>
-    </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/180" alt="Laptop">
+            <h3>HP Laptop</h3>
+            <p class="price">₹54,999</p>
+            <p class="rating">★★★★☆</p>
+            <button class="cart-btn">Add To Cart</button>
+        </div>
 
-    <div class="card">
-        <img src="https://img.thecdn.in/380346/SKU-1569_0-1720948513201.jpg?width=1200&format=webp">
-        <h3>Nike Shoes</h3>
-         <p>⭐⭐⭐⭐⭐</p>
+        <div class="card">
+            <img src="https://via.placeholder.com/180" alt="Watch">
+            <h3>Smart Watch</h3>
+            <p class="price">₹2,999</p>
+            <p class="rating">★★★★★</p>
+            <button class="cart-btn">Add To Cart</button>
+        </div>
 
-        <p>₹3,999</p>
-         <p class="discount">20% OFF</p>
-        <button class="cart-btn">Add to Cart</button>
-    </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/180" alt="Headphones">
+            <h3>Boat Headphones</h3>
+            <p class="price">₹1,499</p>
+            <p class="rating">★★★★☆</p>
+            <button class="cart-btn">Add To Cart</button>
+        </div>
 
-</section>
-<section class="Featured Brands">
-    <h2>Featured Brands</h2>
-    <div class="brand-container">
-    <div class="brands"><h2>Apple</h2></div>
-    <div class="brands"><h2>HP</h2></div>
-    <div class="brands"><h2>NIKE</h2></div>
-    </div>
-</section>
+    </section>
 
-<footer>
+    <!-- Electronics Section -->
+    <h2 class="heading">Top Electronics</h2>
+
+    <section class="products">
+
+        <div class="card">
+            <img src="https://via.placeholder.com/180" alt="">
+            <h3>Bluetooth Speaker</h3>
+            <p class="price">₹1,999</p>
+            <button class="cart-btn">Add To Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/180" alt="">
+            <h3>Gaming Mouse</h3>
+            <p class="price">₹899</p>
+            <button class="cart-btn">Add To Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/180" alt="">
+            <h3>Keyboard</h3>
+            <p class="price">₹1,299</p>
+            <button class="cart-btn">Add To Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/180" alt="">
+            <h3>Monitor</h3>
+            <p class="price">₹12,999</p>
+            <button class="cart-btn">Add To Cart</button>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
     <footer>
-    <div>
-        <h3>About</h3>
-        <p>Contact Us</p>
-        <p>About Us</p>
-    </div>
+        <div>
+            <h3>About</h3>
+            <p>Company</p>
+            <p>Careers</p>
+            <p>Contact Us</p>
+        </div>
 
-    <div>
-        <h3>Help</h3>
-        <p>Payments</p>
-        <p>Shipping</p>
-    </div>
+        <div>
+            <h3>Help</h3>
+            <p>Payments</p>
+            <p>Shipping</p>
+            <p>Returns</p>
+        </div>
 
-    <div>
-        <h3>Policy</h3>
-        <p>Return Policy</p>
-        <p>Terms of Use</p>
-    </div>
-</footer>
-</footer>
+        <div>
+            <h3>Policy</h3>
+            <p>Privacy Policy</p>
+            <p>Terms & Conditions</p>
+        </div>
+    </footer>
 
+    <script src="script.js"></script>
 
-    <script src="script.js"> </script>
-    
 </body>
 </html>
