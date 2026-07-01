@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Clone</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <span id="userNameDisplay"></span>
+    <div id="toast" class="toast"></div>
+
+    <div class="logo">
+        <i class="fa-solid fa-bag-shopping"></i>
+        Flipkart
+    </div>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search products, brands and more">
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+
+
+    <div class="nav-right">
+        <a href="login.html"><button>Login</button></a>
+        <a href="cart.html">
+<button id="cartIcon">
+Cart (<span id="cartCount">0</span>)
+</button>
+</a>
+        <a href="wishlist.html"><button>Wishlist</button></a>
+        <a href="sellerRegistration.html"><button>Become Seller</button></a>
+    </div>
+
+</nav>
+<section class="categories">
+
+<div class="category" data-category="all">
+    <i class="fa-solid fa-border-all"></i>
+    <p>All</p>
+</div>
+
+<div class="category" data-category="grocery">
+    <i class="fa-solid fa-cart-shopping"></i>
+    <p>Grocery</p>
+</div>
+
+<div class="category" data-category="mobiles">
+    <i class="fa-solid fa-mobile"></i>
+    <p>Mobiles</p>
+</div>
+
+<div class="category" data-category="fashion">
+    <i class="fa-solid fa-shirt"></i>
+    <p>Fashion</p>
+</div>
+
+<div class="category" data-category="laptops">
+    <i class="fa-solid fa-laptop"></i>
+    <p>Laptops</p>
+</div>
+
+<div class="category" data-category="electronics">
+    <i class="fa-solid fa-tv"></i>
+    <p>Electronics</p>
+</div>
+
+</section>
+
+<section class="hero">
+    <h1>Big Billion Days</h1>
+    <p>Up to 80% OFF</p>
+</section>
+
+<h2 class="heading">Best Deals</h2>
+<section class="products">
+<div class="card" data-category="mobiles">
+    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500" alt="iPhone 15">
+    <h3>iPhone 15</h3>
+    <p class="price">₹79,999</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="mobiles">
+    <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500" alt="Samsung S24">
+    <h3>Samsung Galaxy S24</h3>
+    <p class="price">₹74,999</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="mobiles">
+    <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?w=500" alt="OnePlus">
+    <h3>OnePlus 12</h3>
+    <p class="price">₹64,999</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="mobiles">
+    <img src="https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?w=500" alt="iPad">
+    <h3>iPad Air</h3>
+    <p class="price">₹52,999</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="laptops">
+    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500" alt="Dell">
+    <h3>Dell Inspiron</h3>
+    <p class="price">₹58,999</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="laptops">
+    <img src="https://images.unsplash.com/photo-1517336714739-489689fd1ca8?w=500" alt="Lenovo">
+    <h3>Lenovo IdeaPad</h3>
+    <p class="price">₹49,999</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="laptops">
+    <img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=500" alt="HP">
+    <h3>HP Pavilion</h3>
+    <p class="price">₹61,999</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="electronics">
+    <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=500" alt="TV">
+    <h3>Smart LED TV</h3>
+    <p class="price">₹34,999</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="electronics">
+    <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=500" alt="Monitor">
+    <h3>Gaming Monitor</h3>
+    <p class="price">₹15,999</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="electronics">
+    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=500" alt="Watch">
+    <h3>Smart Watch</h3>
+    <p class="price">₹2,999</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="electronics">
+    <img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=500" alt="Power Bank">
+    <h3>Power Bank</h3>
+    <p class="price">₹1,299</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="audio">
+    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" alt="Headphones">
+    <h3>JBL Headphones</h3>
+    <p class="price">₹2,999</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="audio">
+    <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=500" alt="Speaker">
+    <h3>Bluetooth Speaker</h3>
+    <p class="price">₹2,199</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="fashion">
+    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500" alt="Shoes">
+    <h3>Nike Shoes</h3>
+    <p class="price">₹3,999</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="fashion">
+    <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500" alt="Tshirt">
+    <h3>Men T-Shirt</h3>
+    <p class="price">₹699</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="fashion">
+    <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=500" alt="Hoodie">
+    <h3>Hoodie</h3>
+    <p class="price">₹1,299</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="fashion">
+    <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500" alt="Handbag">
+    <h3>Women Handbag</h3>
+    <p class="price">₹1,499</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="grocery">
+    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=500" alt="Vegetables">
+    <h3>Fresh Vegetables</h3>
+    <p class="price">₹299</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="grocery">
+    <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500" alt="Rice">
+    <h3>Basmati Rice</h3>
+    <p class="price">₹799</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="grocery">
+    <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=500" alt="Oil">
+    <h3>Cooking Oil</h3>
+    <p class="price">₹199</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+<div class="card" data-category="electronics">
+    <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500" alt="Refrigerator">
+    <h3>LG Refrigerator</h3>
+    <p class="price">₹32,999</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="electronics">
+    <img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=500" alt="Washing Machine">
+    <h3>Samsung Washing Machine</h3>
+    <p class="price">₹24,999</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="electronics">
+    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=500" alt="Air Conditioner">
+    <h3>Voltas Air Conditioner</h3>
+    <p class="price">₹38,999</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="electronics">
+    <img src="https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=500" alt="Microwave">
+    <h3>IFB Microwave Oven</h3>
+    <p class="price">₹11,999</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="electronics">
+    <img src="https://images.unsplash.com/photo-1585659722983-3a675dabf23d?w=500" alt="Mixer">
+    <h3>Prestige Mixer Grinder</h3>
+    <p class="price">₹3,499</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="fashion">
+    <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=500" alt="Women's Dress">
+    <h3>Women's Dress</h3>
+    <p class="price">₹1,799</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="fashion">
+    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500" alt="Jeans">
+    <h3>Blue Jeans</h3>
+    <p class="price">₹999</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="fashion">
+    <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=500" alt="Jacket">
+    <h3>Winter Jacket</h3>
+    <p class="price">₹2,499</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="fashion">
+    <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=500" alt="Cap">
+    <h3>Sports Cap</h3>
+    <p class="price">₹499</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="fashion">
+    <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=500" alt="Sneakers">
+    <h3>White Sneakers</h3>
+    <p class="price">₹2,799</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="grocery">
+    <img src="https://images.unsplash.com/photo-1579113800032-c38bd7635818?w=500" alt="Tea">
+    <h3>Tata Tea Premium</h3>
+    <p class="price">₹349</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="grocery">
+    <img src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?w=500" alt="Coffee">
+    <h3>Nescafe Coffee</h3>
+    <p class="price">₹599</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="grocery">
+    <img src="https://images.unsplash.com/photo-1514996937319-344454492b37?w=500" alt="Dry Fruits">
+    <h3>Mixed Dry Fruits</h3>
+    <p class="price">₹899</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="electronics">
+    <img src="https://images.unsplash.com/photo-1503602642458-232111445657?w=500" alt="Office Chair">
+    <h3>Office Chair</h3>
+    <p class="price">₹5,999</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="electronics">
+    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=500" alt="Study Table">
+    <h3>Study Table</h3>
+    <p class="price">₹7,999</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="electronics">
+    <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=500" alt="Table Lamp">
+    <h3>LED Table Lamp</h3>
+    <p class="price">₹1,299</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="electronics">
+    <img src="https://images.unsplash.com/photo-1517705008128-361805f42e86?w=500" alt="Keyboard">
+    <h3>Mechanical Keyboard</h3>
+    <p class="price">₹3,499</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="electronics">
+    <img src="https://images.unsplash.com/photo-1527814050087-3793815479db?w=500" alt="Mouse">
+    <h3>Wireless Mouse</h3>
+    <p class="price">₹999</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="electronics">
+    <img src="https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?w=500" alt="Webcam">
+    <h3>HD Webcam</h3>
+    <p class="price">₹2,199</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="electronics">
+    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500" alt="Router">
+    <h3>WiFi Router</h3>
+    <p class="price">₹2,499</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+<div class="card" data-category="electronics">
+    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500" alt="Camera">
+    <h3>Canon DSLR Camera</h3>
+    <p class="price">₹49,999</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="electronics">
+    <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=500" alt="Printer">
+    <h3>HP Laser Printer</h3>
+    <p class="price">₹12,999</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="electronics">
+    <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=500" alt="Tablet">
+    <h3>Samsung Galaxy Tab</h3>
+    <p class="price">₹24,999</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="electronics">
+    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=500" alt="Smart Watch">
+    <h3>Apple Watch SE</h3>
+    <p class="price">₹29,999</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="audio">
+    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" alt="Sony Headphones">
+    <h3>Sony Headphones</h3>
+    <p class="price">₹5,999</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="audio">
+    <img src="https://images.unsplash.com/photo-1585298723682-7115561c51b7?w=500" alt="AirPods">
+    <h3>Apple AirPods</h3>
+    <p class="price">₹12,999</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="fashion">
+    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500" alt="Backpack">
+    <h3>Travel Backpack</h3>
+    <p class="price">₹1,499</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="fashion">
+    <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=500" alt="Wallet">
+    <h3>Leather Wallet</h3>
+    <p class="price">₹799</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="fashion">
+    <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=500" alt="Watch">
+    <h3>Fastrack Watch</h3>
+    <p class="price">₹2,499</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="grocery">
+    <img src="https://images.unsplash.com/photo-1579113800032-c38bd7635818?w=500" alt="Tea">
+    <h3>Green Tea Pack</h3>
+    <p class="price">₹299</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="grocery">
+    <img src="https://images.unsplash.com/photo-1514996937319-344454492b37?w=500" alt="Dry Fruits">
+    <h3>Premium Almonds</h3>
+    <p class="price">₹699</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="grocery">
+    <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=500" alt="Oil">
+    <h3>Fortune Oil</h3>
+    <p class="price">₹249</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="electronics">
+    <img src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=500" alt="Desktop">
+    <h3>Gaming PC</h3>
+    <p class="price">₹74,999</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="electronics">
+    <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500" alt="Projector">
+    <h3>Mini Projector</h3>
+    <p class="price">₹8,999</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="electronics">
+    <img src="https://images.unsplash.com/photo-1580894908361-967195033215?w=500" alt="Keyboard">
+    <h3>RGB Keyboard</h3>
+    <p class="price">₹1,999</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="electronics">
+    <img src="https://images.unsplash.com/photo-1527814050087-3793815479db?w=500" alt="Mouse">
+    <h3>Gaming Mouse</h3>
+    <p class="price">₹899</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="mobiles">
+    <img src="https://images.unsplash.com/photo-1567581935884-3349723552ca?w=500" alt="Realme">
+    <h3>Realme GT</h3>
+    <p class="price">₹32,999</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="mobiles">
+    <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?w=500" alt="Vivo">
+    <h3>Vivo V40</h3>
+    <p class="price">₹28,999</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="mobiles">
+    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500" alt="Nothing Phone">
+    <h3>Nothing Phone 2</h3>
+    <p class="price">₹39,999</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+
+<div class="card" data-category="fashion">
+    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500" alt="Running Shoes">
+    <h3>Adidas Running Shoes</h3>
+    <p class="price">₹4,499</p>
+    <button class="add-to-cart">Add To Cart</button>
+</div>
+</section>
+
+</section>
+<footer>
+    <div>
+        <h3>About</h3>
+        <p>Contact Us</p>
+        <p>About Us</p>
+        <p>Careers</p>
+    </div>
+
+    <div>
+        <h3>Help</h3>
+        <p>Payments</p>
+        <p>Shipping</p>
+        <p>Cancellation</p>
+    </div>
+
+    <div>
+        <h3>Policy</h3>
+        <p>Return Policy</p>
+        <p>Terms</p>
+        <p>Security</p>
+    </div>
+
+    <div>
+        <h3>Social</h3>
+        <p>Facebook</p>
+        <p>Twitter</p>
+        <p>Instagram</p>
+    </div>
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>

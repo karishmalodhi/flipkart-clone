@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Registration</title>
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#2874f0,#00c6ff);
+}
+
+.seller-box{
+    background:white;
+    padding:40px;
+    width:380px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.seller-box h2{
+    color:#2874f0;
+    margin-bottom:10px;
+}
+
+.seller-box p{
+    color:gray;
+    margin-bottom:20px;
+}
+
+.seller-box input,
+.seller-box textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+.seller-box textarea{
+    resize:none;
+    height:80px;
+}
+
+.seller-box input:focus,
+.seller-box textarea:focus{
+    outline:none;
+    border:2px solid #2874f0;
+}
+
+.seller-box button{
+    width:100%;
+    padding:12px;
+    background:#2874f0;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    margin-top:10px;
+}
+
+.seller-box button:hover{
+    background:#0b5ed7;
+}
+
+.home-link{
+    margin-top:15px;
+}
+
+.home-link a{
+    text-decoration:none;
+    color:#2874f0;
+    font-weight:bold;
+}
+    </style>
+</head>
+<body>
+
+    <div class="seller-container">
+        <div class="seller-box">
+            <h2>Seller Registration</h2>
+            <p>Become a Seller on Flipkart</p>
+
+            <input type="text" placeholder="Seller Name">
+            <input type="text" placeholder="Business Name">
+            <input type="email" placeholder="Email">
+            <input type="tel" placeholder="Phone Number">
+            <textarea placeholder="Business Address"></textarea>
+
+            <button id="seller-btn">Register</button>
+
+            <p class="home-link">
+                <a href="index.html">Back to Home</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("seller-btn").addEventListener("click", function() {
+            alert("Seller Registration Submitted Successfully!");
+        });
+    </script>
+
+</body>
+</html>

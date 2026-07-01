@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Details</title>
+<style>
+body{font-family:Arial;background:#f1f3f6;margin:0;padding:30px}
+.container{max-width:1000px;margin:auto;background:#fff;padding:25px;border-radius:10px}
+.product{display:flex;gap:30px;flex-wrap:wrap}
+#mainImage{width:320px;border-radius:10px}
+.small-images img{width:70px;height:70px;border:1px solid #ddd;padding:5px;cursor:pointer}
+.image-section{display:flex;gap:20px}
+.price{font-size:28px;color:green}
+.btn{padding:12px 20px;border:none;border-radius:5px;cursor:pointer;margin-right:10px}
+.cart-btn{background:#ff9f00;color:#fff}.wishlist-btn{background:#2874f0;color:#fff}
+.quantity-box{display:flex;gap:15px;align-items:center;margin:20px 0}
+.quantity-box button{width:35px;height:35px}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="product">
+<div class="image-section">
+<div class="small-images">
+<img id="thumb1" onclick="changeImage(this.src)">
+</div>
+<img id="mainImage">
+</div>
+<div>
+<h1 id="productName">Loading...</h1>
+<div class="price" id="productPrice"></div>
+<p id="productDescription"></p>
+<div class="quantity-box">
+<button onclick="decreaseQty()">-</button>
+<span id="qty">1</span>
+<button onclick="increaseQty()">+</button>
+</div>
+<button class="btn cart-btn" id="addCartBtn">🛒 Add To Cart</button>
+<button class="btn wishlist-btn">❤️ Wishlist</button>
+<button class="btn" id="buyNowBtn" style="background:#fb641b;color:white">⚡ Buy Now</button>
+</div>
+</div>
+</div>
+<script>
+let quantity=1;
+function increaseQty(){quantity++;qty.innerText=quantity;}
+function decreaseQty(){if(quantity>1){quantity--;qty.innerText=quantity;}}
+function changeImage(s){mainImage.src=s;}
+
+const id=new URLSearchParams(location.search).get("id");
+if(id){
+fetch("http://localhost:5000/api/products/"+id)
+.then(r=>r.json())
+.then(p=>{
+productName.innerText=p.name;
+productPrice.innerText="₹"+p.price;
+productDescription.innerText=p.description;
+mainImage.src=p.image;
+thumb1.src=p.image;
+document.getElementById("addCartBtn").onclick=()=>{
+let cart=JSON.parse(localStorage.getItem("cart"))||[];
+cart.push({name:p.name,price:"₹"+p.price,image:p.image,qty:quantity});
+localStorage.setItem("cart",JSON.stringify(cart));
+alert("Product Added To Cart");
+};
+});
+}
+buyNowBtn.onclick=()=>location.href="checkout.html";
+</script>
+</body></html>
