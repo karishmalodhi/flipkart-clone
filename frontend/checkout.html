@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f1f3f6;
+}
+
+.container{
+    width:80%;
+    margin:30px auto;
+    display:flex;
+    gap:20px;
+}
+
+.left,.right{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+
+.left{
+    flex:2;
+}
+
+.right{
+    flex:1;
+    height:fit-content;
+}
+
+input,textarea{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:16px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#2874f0;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0b5ed7;
+}
+
+.payment{
+    margin-top:15px;
+}
+
+.payment label{
+    display:block;
+    margin:10px 0;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="left">
+
+<h2>Delivery Address</h2>
+
+<input type="text" id="name" placeholder="Full Name">
+
+<input type="text" id="phone" placeholder="Phone Number">
+
+<textarea id="address" placeholder="Complete Address"></textarea>
+
+<h2>Payment Method</h2>
+
+<div class="payment">
+<label><input type="radio" name="pay" value="COD" checked> Cash on Delivery</label>
+
+<label><input type="radio" name="pay" value="UPI"> UPI</label>
+
+<label><input type="radio" name="pay" value="Card"> Debit/Credit Card</label>
+</div>
+
+</div>
+
+<div class="right">
+
+<h2>Order Summary</h2>
+
+<h3>Total : ₹<span id="total">0</span></h3>
+
+<button id="placeOrder">Place Order</button>
+
+</div>
+
+</div>
+
+<script>
+
+let cart=JSON.parse(localStorage.getItem("cart"))||[];
+
+let total=0;
+
+cart.forEach(item=>{
+
+let price=parseInt(item.price.replace("₹",""));
+
+let qty=item.qty||1;
+
+total+=price*qty;
+
+});
+
+document.getElementById("total").innerText=total;
+
+document.getElementById("placeOrder").onclick=function(){
+
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let address=document.getElementById("address").value;
+
+if(name==""||phone==""||address==""){
+alert("Please fill all details");
+return;
+}
+
+alert("🎉 Order Placed Successfully!");
+
+localStorage.removeItem("cart");
+
+window.location.href="index.html";
+
+}
+
+</script>
+
+</body>
+</html>

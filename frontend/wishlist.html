@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f1f3f6;
+    padding:30px;
+}
+
+.wishlist-container{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    padding:20px;
+    border-radius:12px;
+}
+
+.wishlist-container h1{
+    color:#2874f0;
+    margin-bottom:20px;
+}
+
+.wishlist-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #ddd;
+    padding:15px 0;
+}
+
+.remove-btn{
+    background:red;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    border-radius:5px;
+    cursor:pointer;
+}
+    </style>
+</head>
+<body>
+
+    <div class="wishlist-container">
+        <h1>My Wishlist ❤️</h1>
+
+        <div class="wishlist-item">
+            <h2>Samsung Galaxy S24</h2>
+            <p>₹74,999</p>
+            <button class="remove-btn">Remove</button>
+            <a href="products.html">view products</a>
+        </div>
+
+        <div class="wishlist-item">
+            <h2>HP Laptop</h2>
+            <p>₹54,999</p>
+            <button class="remove-btn">Remove</button>
+             <a href="products.html">view products</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

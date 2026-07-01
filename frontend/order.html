@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Tracking</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f1f3f6;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    background:white;
+    width:500px;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+h1{
+    color:#2874f0;
+    margin-bottom:20px;
+}
+
+p{
+    margin:10px 0;
+    font-size:18px;
+}
+
+.status{
+    color:green;
+    font-weight:bold;
+}
+
+.btn{
+    margin-top:20px;
+    padding:10px 20px;
+    border:none;
+    background:#2874f0;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Order Tracking 🚚</h1>
+
+    <p><strong>Order ID:</strong> #12345</p>
+
+    <p><strong>Product:</strong> iPhone 15</p>
+
+    <p><strong>Order Date:</strong> 25 June 2026</p>
+
+    <p><strong>Status:</strong>
+        <span class="status">Shipped</span>
+    </p>
+
+    <p><strong>Expected Delivery:</strong> 30 June 2026</p>
+
+    <button class="btn" onclick="location.href='index.html'">
+        Back to Home
+    </button>
+
+</div>
+
+</body>
+</html>

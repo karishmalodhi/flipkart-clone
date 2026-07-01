@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+<style>
+  *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
+}
+
+body{
+  background: linear-gradient(135deg, #2874f0, #00c6ff);
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.container{
+  width:100%;
+  display:flex;
+  justify-content:center;
+}
+
+.card{
+  background:white;
+  padding:40px;
+  border-radius:15px;
+  width:320px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.card h2{
+  margin-bottom:10px;
+  color:#2874f0;
+}
+
+.card p{
+  margin-bottom:20px;
+  color:gray;
+}
+
+.card input{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border:1px solid #ccc;
+  border-radius:8px;
+}
+
+.card button{
+  width:100%;
+  padding:12px;
+  background:#2874f0;
+  color:white;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:16px;
+  margin-top:10px;
+}
+
+.card button:hover{
+  background:#0b5ed7;
+}
+
+.bottom-text{
+  margin-top:15px;
+  font-size:12px;
+}
+
+.bottom-text a{
+  color:#2874f0;
+  text-decoration:none;
+}
+</style>
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="card">
+      <h2>Welcome Back</h2>
+      <p>Login to continue</p>
+
+      <input type="text" id="username" placeholder="Email or Username">
+      <input type="password" id="password" placeholder="Password">
+
+      <button onclick="login()">Login</button>
+
+      <div class="bottom-text">
+        <a href="#">Forgot Password?</a>
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+      </div>
+    </div>
+  </div>
+  <script>
+function login(){
+
+  let user = document.getElementById("username").value;
+  let pass = document.getElementById("password").value;
+
+  if(user === "" || pass === ""){
+    alert("Please fill all fields");
+    return;
+  }
+
+  // fake login (demo)
+  localStorage.setItem("user", user);
+
+  alert("Login Successful 🎉");
+
+  window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
